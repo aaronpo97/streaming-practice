@@ -57,9 +57,10 @@ Relevant information:
 - [ ] For each flight, identify:
 
   - Departure airport
-  - Destination IATA code
+  - Destination airport
   - Departure date/time
-
+  - Arrival date/time
+	
 ### Data Integration
 
 - [ ] Match each flight with its departure airport using information from `airports.ini`.
