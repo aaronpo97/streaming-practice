@@ -10,7 +10,7 @@ DTSTART:20250614T150000Z
 DTEND:20250614T210000Z
 SUMMARY:Departure from Toronto Pearson International Airport to Manila (MNL)
 LOCATION:6301 Silver Dart Drive, Mississauga, ON L5P 1B2
-DESCRIPTION:YYZ → MNL (long‑haul route)
+DESCRIPTION:YYZ to MNL (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -20,7 +20,7 @@ DTSTART:20250615T140000Z
 DTEND:20250616T020000Z
 SUMMARY:Departure from Toronto Pearson International Airport to Hong Kong (HKG)
 LOCATION:6301 Silver Dart Drive, Mississauga, ON L5P 1B2
-DESCRIPTION:YYZ → HKG (long‑haul route)
+DESCRIPTION:YYZ to HKG (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -30,7 +30,7 @@ DTSTART:20250616T080000Z
 DTEND:20250616T200000Z
 SUMMARY:Departure from Vancouver International Airport to Hong Kong (HKG)
 LOCATION:3211 Grant McConachie Way, Richmond, BC V7B 0A4
-DESCRIPTION:YVR → HKG (long‑haul route)
+DESCRIPTION:YVR to HKG (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -40,7 +40,7 @@ DTSTART:20250617T090000Z
 DTEND:20250617T210000Z
 SUMMARY:Departure from Vancouver International Airport to London (LHR)
 LOCATION:3211 Grant McConachie Way, Richmond, BC V7B 0A4
-DESCRIPTION:YVR → LHR (long‑haul route)
+DESCRIPTION:YVR to LHR (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -50,7 +50,7 @@ DTSTART:20250618T100000Z
 DTEND:20250618T220000Z
 SUMMARY:Departure from Calgary International Airport to Seoul (ICN)
 LOCATION:2000 Airport Road NE, Calgary, AB T2E 6W5
-DESCRIPTION:YYC → ICN (~11 h 50 m)
+DESCRIPTION:YYC to ICN (~11 h 50 m)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -60,7 +60,7 @@ DTSTART:20250619T090000Z
 DTEND:20250619T190000Z
 SUMMARY:Departure from Calgary International Airport to Amsterdam (AMS)
 LOCATION:2000 Airport Road NE, Calgary, AB T2E 6W5
-DESCRIPTION:YYC → AMS (long‑haul route)
+DESCRIPTION:YYC to AMS (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -70,7 +70,7 @@ DTSTART:20250620T110000Z
 DTEND:20250620T210000Z
 SUMMARY:Departure from Edmonton International Airport to Amsterdam (AMS)
 LOCATION:1000 Airport Road, Leduc County, AB T9E 0V3
-DESCRIPTION:YEG → AMS (long‑haul route)
+DESCRIPTION:YEG to AMS (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -80,7 +80,7 @@ DTSTART:20250621T120000Z
 DTEND:20250622T000000Z
 SUMMARY:Departure from Edmonton International Airport to Frankfurt (FRA)
 LOCATION:1000 Airport Road, Leduc County, AB T9E 0V3
-DESCRIPTION:YEG → FRA (long‑haul route)
+DESCRIPTION:YEG to FRA (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -90,7 +90,7 @@ DTSTART:20250622T130000Z
 DTEND:20250622T230000Z
 SUMMARY:Departure from Halifax Stanfield International Airport to Frankfurt (FRA)
 LOCATION:1 Bell Boulevard, Enfield, NS B2T 1K2
-DESCRIPTION:YHZ → FRA (long‑haul route)
+DESCRIPTION:YHZ to FRA (long-haul route)
 END:VEVENT
 
 BEGIN:VEVENT
@@ -100,7 +100,7 @@ DTSTART:20250623T140000Z
 DTEND:20250623T200000Z
 SUMMARY:Departure from Halifax Stanfield International Airport to Amsterdam (AMS)
 LOCATION:1 Bell Boulevard, Enfield, NS B2T 1K2
-DESCRIPTION:YHZ → AMS (long‑haul route)
+DESCRIPTION:YHZ to AMS (long-haul route)
 END:VEVENT
 
 END:VCALENDAR

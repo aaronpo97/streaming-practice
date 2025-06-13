@@ -31,13 +31,21 @@ A calendar file with multiple events, each representing a long-haul flight:
 
 ```ics
 BEGIN:VEVENT
-SUMMARY:Departure from Toronto Pearson International Airport to Manila (MNL)
+UID:yyz-dep-20250614T150000Z-9f8a7b23@example.com
+DTSTAMP:20250613T120000Z
 DTSTART:20250614T150000Z
-DESCRIPTION:YYZ → MNL (long-haul route)
-...
+DTEND:20250614T210000Z
+SUMMARY:Departure from Toronto Pearson International Airport to Manila (MNL)
+LOCATION:6301 Silver Dart Drive, Mississauga, ON L5P 1B2
+DESCRIPTION:YYZ to MNL (long-haul route)
 END:VEVENT
 ```
 
+Relevant information: 
+- DTSTART: scheduled departure time
+- DTEND: estimated arrival time
+- All times are in UTC time, no need to handle timezone math.
+- Not all data in the .ics file is needed (ex. UID, DTSTAMP)
 ---
 
 ## Exercises
