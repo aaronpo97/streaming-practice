@@ -1,0 +1,11 @@
+AlignConsecutiveAssignments: true
+AlignConsecutiveDeclarations: true
+AllowAllParametersOfDeclarationOnNextLine: true
+
+NamespaceIndentation: All
+ColumnLimit: 90
+IndentCaseLabels: true
+
+# Indentation settings
+IndentWidth: 4
+UseTab: Never

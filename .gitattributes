@@ -1,0 +1,49 @@
+# Enforce LF (Unix-style) line endings for all text files
+* text eol=lf
+
+# C++ source and header files
+*.cpp     text eol=lf
+*.c       text eol=lf
+*.h       text eol=lf
+*.hpp     text eol=lf
+*.cc      text eol=lf
+*.hh      text eol=lf
+*.inl     text eol=lf
+
+
+# Git metadata files
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+
+# Data files
+*.ini     text eol=lf
+*.ics     text eol=lf
+
+# Build and config files
+Makefile        text eol=lf
+CMakeLists.txt  text eol=lf
+*.cmake         text eol=lf
+*.clang-format  text eol=lf
+*.txt           text eol=lf
+
+# Scripts and documentation
+*.sh      text eol=lf
+*.md      text eol=lf
+*.json    text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+
+# Ignore binary files from normalization
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.gif     binary
+*.ico     binary
+*.pdf     binary
+*.zip     binary
+*.exe     binary
+*.dll     binary
+*.so      binary
+*.a       binary
+*.o       binary
