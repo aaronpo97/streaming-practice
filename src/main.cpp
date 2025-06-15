@@ -45,10 +45,8 @@ int main(int argc, char *argv[]) {
     // std::vector<Airport> airports = Parsers::parse_airport_data(airports_file_stream);
     std::vector<Airport> airports = {
         {.name              = "Toronto Pearson International Airport",
-         .province          = "Ontario",
-         .city              = "Toronto",
          .iata_code         = "YYZ",
-         .annual_passangers = 50000000,
+         .annual_passengers = 50000000,
          .elevation_ft      = 569,
          .timezone          = "UTC-5",
          .address           = "6301 Silver Dart Dr, Mississauga, ON L5P 1B2, Canada",

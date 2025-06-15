@@ -19,18 +19,20 @@
  * - coordinates: Latitude and longitude pair (in degrees).
  */
 
-using Coordinates = std::pair<double, double>;
+struct Coordinates {
+    double latitude;
+    double longitude;
+};
 
 struct Airport {
     std::string  name;
-    std::string  province;
-    std::string  city;
     std::string  iata_code;
-    unsigned int annual_passangers;
-    unsigned int elevation_ft;
+    unsigned int annual_passengers;
+    int          elevation_ft;
     std::string  timezone;
     std::string  address;
     Coordinates  coordinates;
 };
 
+std::ostream &operator<<(std::ostream &os, const Coordinates &c);
 std::ostream &operator<<(std::ostream &os, const Airport &a);

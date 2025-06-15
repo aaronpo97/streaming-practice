@@ -41,11 +41,13 @@ DESCRIPTION:YYZ to MNL (long-haul route)
 END:VEVENT
 ```
 
-Relevant information: 
+Relevant information:
+
 - DTSTART: scheduled departure time
 - DTEND: estimated arrival time
 - All times are in UTC time, no need to handle timezone math.
 - Not all data in the .ics file is needed (ex. UID, DTSTAMP)
+
 ---
 
 ## Exercises
@@ -53,14 +55,14 @@ Relevant information:
 ### File Parsing
 
 - [ ] Read the `airports.ini` file and store the airports in a suitable data structure.
-- [ ] Read the `departures.ics` file and extract flight events.
-- [ ] For each flight, identify:
+- [x] Read the `departures.ics` file and extract flight events.
+- [x] For each flight, identify:
 
   - Departure airport
   - Destination airport
   - Departure date/time
   - Arrival date/time
-	
+
 ### Data Integration
 
 - [ ] Match each flight with its departure airport using information from `airports.ini`.
