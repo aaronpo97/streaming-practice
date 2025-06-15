@@ -1,5 +1,6 @@
 #pragma once
 #include <chrono>
+#include "./helpers.hpp"	
 using Timestamp = std::chrono::time_point<std::chrono::system_clock, std::chrono::seconds>;
 
 
@@ -21,4 +22,6 @@ struct Departure {
 	std::string departure_airport;
 	std::string arrival_airport;
 };
+
+std::ostream& operator << (std::ostream& os, const Departure& d);
 
