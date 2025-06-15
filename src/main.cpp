@@ -124,7 +124,7 @@ int main(int argc, char *argv[])
 {
 	// Step 1: Create a file stream for the .ics file
 	std::cout << "Current path: " << std::filesystem::current_path() << std::endl;
-	std::ifstream departure_file_stream("../../../data-sets/departures.ics");
+	std::ifstream departure_file_stream("./data-sets/departures.ics");
 
 	// Step 2: Check if the file opened, if not display a warning and exit gracefully.
 	if (!departure_file_stream.is_open()) {
