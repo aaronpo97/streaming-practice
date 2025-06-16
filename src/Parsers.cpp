@@ -91,19 +91,84 @@ namespace Parsers {
         return departures;
     }
 
+    /*
+     * Example airport data format:
+     *
+     *     [YVR]
+     *     Name=Vancouver International Airport
+     *     Province=British Columbia
+     *     City=Richmond
+     *     IATA_Code=YVR
+     *     Annual_Passengers=26205801
+     *     Elevation_ft=14
+     *     Timezone_Summer=UTC-7
+     *     Timezone_Winter=UTC-8
+     *     Address=3211 Grant McConachie Way, Richmond, BC V7B 0A4
+     *     Coordinates=49.19472, -123.18389
+     *
+     */
     std::vector<Airport> parse_airport_data(std::ifstream &airport_file_stream) {
         std::vector<Airport> airports;
         std::string          line;
         Airport              airport;
 
         while (std::getline(airport_file_stream, line)) {
-            // Skip empty lines
-            if (line.empty()) {
+            // Check for heading lines e.g. [YYC]
+            if (line.find('[') != std::string::npos &&
+                line.find(']') != std::string::npos) {
+                // If we have an airport, push it to the vector
+                if (!airport.name.empty()) {
+                    airports.push_back(airport);
+                    airport = Airport();
+                }
+
                 continue;
             }
 
-            airports.push_back(airport);
-            airport = Airport();
+            std::stringstream str_stream(line);
+            std::string       key, value;
+            // Split the line into key-value pairs
+            std::getline(str_stream, key, '=');
+            std::getline(str_stream, value);
+
+            trim(key);
+            trim(value);
+
+            // Process the key-value pairs
+            if (key == "Name") {
+                airport.name = value;
+            } else if (key == "IATA_Code") {
+                airport.iata_code = value;
+            } else if (key == "Annual_Passengers") {
+                airport.annual_passengers = std::stoul(value);
+            } else if (key == "Elevation_ft") {
+                airport.elevation_ft = std::stoi(value);
+            } else if (key == "Timezone_Winter") {
+                airport.timezone.winter = "UTC" + value;
+            } else if (key == "Timezone_Summer") {
+                airport.timezone.summer = "UTC" + value;
+            } else if (key == "Province") {
+                // Not used in the Airport struct, but can be stored if needed
+                // airport.province = value;
+            } else if (key == "State") {
+                // Not used in the Airport struct, but can be stored if needed
+                // airport.state = value;
+            } else if (key == "Country") {
+                // Not used in the Airport struct, but can be stored if needed
+                // airport.country = value;
+            } else if (key == "City") {
+                // Not used in the Airport struct, but can be stored if needed
+                // airport.city = value;
+            } else if (key == "Address") {
+                airport.address = value;
+            } else if (key == "Coordinates") {
+                std::stringstream coord_stream(value);
+                std::string       lat_str, lon_str;
+                std::getline(coord_stream, lat_str, ',');
+                std::getline(coord_stream, lon_str);
+                airport.coordinates.latitude  = std::stod(lat_str);
+                airport.coordinates.longitude = std::stod(lon_str);
+            }
         }
 
         return airports;

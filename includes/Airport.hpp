@@ -24,15 +24,26 @@ struct Coordinates {
     double longitude;
 };
 
+struct Timezone {
+    std::string winter; // e.g., "UTC-5"
+    std::string summer; // e.g., "UTC-4"
+};
+
 struct Airport {
     std::string  name;
     std::string  iata_code;
     unsigned int annual_passengers;
     int          elevation_ft;
-    std::string  timezone;
-    std::string  address;
-    Coordinates  coordinates;
+    Timezone     timezone;
+
+    std::optional<std::string> city;     // Optional, can be empty
+    std::optional<std::string> country;  // Optional, can be empty
+    std::optional<std::string> state;    // Optional, can be empty
+    std::optional<std::string> province; // Optional, can be empty
+    std::optional<std::string> address;
+    Coordinates                coordinates;
 };
 
 std::ostream &operator<<(std::ostream &os, const Coordinates &c);
+std::ostream &operator<<(std::ostream &os, const Timezone &t);
 std::ostream &operator<<(std::ostream &os, const Airport &a);

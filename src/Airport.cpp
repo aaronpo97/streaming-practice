@@ -9,6 +9,12 @@ std::ostream &operator<<(std::ostream &os, const Coordinates &c) {
     return os;
 }
 
+std::ostream &operator<<(std::ostream &os, const Timezone &t) {
+    os << std::left << std::setw(20) << "Winter" << " | " << t.winter << "\n"
+       << std::setw(20) << "Summer" << " | " << t.summer;
+    return os;
+}
+
 std::ostream &operator<<(std::ostream &os, const Airport &a) {
     os << std::left << line_sep << "\n"
        << "Airport: " << a.name << "\n"

@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
         Parsers::parse_departure_data(departure_file_stream);
 
     for (const auto &departure : departures) {
-        std::cout << departure << "\n";
+        std::cout << departure;
     }
 
     // Step 4: Close the file stream
@@ -42,22 +42,13 @@ int main(int argc, char *argv[]) {
     }
 
     // Step 3: Call the parsing function
-    // std::vector<Airport> airports = Parsers::parse_airport_data(airports_file_stream);
-    std::vector<Airport> airports = {
-        {.name              = "Toronto Pearson International Airport",
-         .iata_code         = "YYZ",
-         .annual_passengers = 50000000,
-         .elevation_ft      = 569,
-         .timezone          = "UTC-5",
-         .address           = "6301 Silver Dart Dr, Mississauga, ON L5P 1B2, Canada",
-         .coordinates       = {43.6777, -79.6248}},
-    };
+    std::vector<Airport> airports = Parsers::parse_airport_data(airports_file_stream);
 
-    for (const auto &airport : airports) {
-        std::cout << airport << "\n";
-    }
     // Step 4: Close the file stream
     airports_file_stream.close();
 
     // Step 5: Print the airports
+    for (const auto &airport : airports) {
+        std::cout << airport;
+    }
 }
